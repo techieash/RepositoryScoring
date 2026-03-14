@@ -73,7 +73,8 @@ createdAfter |  yes |       Filter repositories created after date with format Y
 GET /api/github-repositories?language=java&createdAfter=2026-01-01&limit=1
 
 ### Example Response
-```json{
+```json
+{
 "total_count": 588298,
 "page": 1,
 "limit": 1,
@@ -146,7 +147,7 @@ repository:
 
 ------------------------------------------------------------------------
 
-# Caching
+# Caching(Performance Optimization)
 
 External API calls are cached to reduce requests to GitHub and avoid
 rate limits.
