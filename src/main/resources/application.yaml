@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: GithubRepositoryScoring
+client:
+  github-url: https://api.github.com
+  github-token:
+
+repository:
+  scoring:
+    stars-weight: 0.5
+    forks-weight: 0.3
+    recency-weight: 0.2
+    recency-thresholds:
+      0: 1.0
+      30: 0.8
+      60: 0.5
+      180: 0.0
+
+
