@@ -59,21 +59,21 @@ GET /api/github-repositories
 
 ### Query Parameters
 
-Parameter      Required   Description
-  -------------- ---------- ----------------------------------------
-1. language       yes        Programming language
-2. createdAfter   yes        Filter repositories created after date with format YYYY-MM-DD
-3. page           no         Page number (default = 1)
-4. limit          no         Results per page (default = 30)
-5. sort            no         Sort by (default = score, options: score, stars, forks)
-6. order           no         Sort order (default = desc, options: asc, desc)
+|Parameter  |    Required |  Description|
+ | --------------| ---------- |----------------------------------------|
+language     |  yes |       Programming language|
+createdAfter |  yes |       Filter repositories created after date with format YYYY-MM-DD|
+|page  |         no  |       Page number (default = 1)
+|limit  |        no    |     Results per page (default = 30)|
+|sort  |          no    |     Sort by (default = score, options: score, stars, forks)
+|order |          no    |     Sort order (default = desc, options: asc, desc)
 
 ### Example Request
 
 GET /api/github-repositories?language=java&createdAfter=2026-01-01&limit=1
 
 ### Example Response
-`{
+```json{
 "total_count": 588298,
 "page": 1,
 "limit": 1,
@@ -88,7 +88,8 @@ GET /api/github-repositories?language=java&createdAfter=2026-01-01&limit=1
 "popularity_score": 568.7
 }
 ]
-}`
+}
+```
 ------------------------------------------------------------------------
 
 # Scoring Algorithm
